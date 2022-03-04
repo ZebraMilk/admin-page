@@ -56,7 +56,8 @@ header {
   grid-column: 2 / 3;
   display: grid;
   grid-template-rows: 3rem 1fr;
-  box-shadow: 0 .1rem .2rem  grey;
+  box-shadow: 0 .1rem .2rem  rgb(199, 199, 199);
+  z-index: 1;
 }
 
 .header-top {
@@ -96,10 +97,6 @@ header {
 
 .header-bottom .logo {
   font-size: 2rem;
-}
-
-.words {
-
 }
 
 .name {
@@ -142,6 +139,7 @@ button {
 }
 
 .content-container {
+  background-color: rgb(230, 230, 230);
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: 7fr 2fr;
@@ -176,7 +174,7 @@ h3 {
 
 .card-background {
   padding: .5rem;
-  background-color: #f4f4f4;
+  background-color: #fff;
   border-radius: 0 4px 4px 0;
   display: grid;
   grid-template-rows: 1.2rem 1fr 1.2rem;
@@ -203,7 +201,7 @@ h3 {
 }
 
 .right-content .card {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
 }
 
 .announcements {

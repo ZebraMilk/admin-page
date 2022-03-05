@@ -18,16 +18,20 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template: 6rem 1fr / 14rem 1fr;
+  background-color: #e6e6fa;
 }
 
 .sidebar {
-  background-color: blueviolet;
   grid-row: 0 / span;
-  height: 100vh;
   display: grid;
   grid-template-rows: 6rem;
   padding: 0 .5rem;
   gap: 8px;
+}
+
+.menu h2 {
+  color: rgb(74, 20, 140);
+  font-size: .9rem;
 }
 
 .menu {
@@ -39,25 +43,48 @@ body {
 .row {
   display: grid;
   grid-template-columns: 2rem 1fr;
-  align-items: center;
+  align-items: start;
+  gap: 8px;
 }
 
 .row.title {
   align-items: start;
   font-size: 1.2rem;
   padding-top: .5rem;
+  color: rgb(74, 20, 140);
 }
 
 .icon {
-  text-align: center;
+  justify-self: end;
+}
+
+svg {
+  fill: rgb(74, 20, 140);
+}
+
+svg:hover {
+  fill: orange;
+}
+
+button:hover {
+  background-color: orange;
 }
 
 header {
+  background-color: #fde4cf;
   grid-column: 2 / 3;
   display: grid;
   grid-template-rows: 3rem 1fr;
-  box-shadow: 0 .1rem .2rem  rgb(199, 199, 199);
+  box-shadow: .1rem .1rem .2rem  rgb(199, 199, 199);
   z-index: 1;
+}
+
+.rick {
+  width: 2.5rem;
+}
+
+.rick.small {
+  width: 1rem;
 }
 
 .header-top {
@@ -136,10 +163,11 @@ button {
   border-radius: 1rem;
   border: 1px solid grey;
   padding: .2rem;
+  background-color: lavender;
 }
 
 .content-container {
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(252, 241, 237);
   grid-column: 2 / 3;
   display: grid;
   grid-template-columns: 7fr 2fr;
@@ -170,11 +198,12 @@ h3 {
   display: grid;
   background-clip: padding-box;
   box-shadow: 0 .1rem .1rem #5c5c5c;
+  text-overflow: ellipsis;
 }
 
 .card-background {
   padding: .5rem;
-  background-color: #fff;
+  background-color: rgb(240, 228, 255);
   border-radius: 0 4px 4px 0;
   display: grid;
   grid-template-rows: 1.2rem 1fr 1.2rem;
@@ -186,12 +215,27 @@ h3 {
 }
 
 .card-content {
+  height: 100%;
+  font-style: italic;
+  font-weight: 300;
+  padding: .2rem;
   align-self: start;
   font-size: .8rem;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
+/* .card-content:hover {
+  white-space: normal;
+  overflow:visible;
+} */
+
 .card-footer {
-  justify-self: end;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  column-gap: 10px;
 }
 
 .right-content {
